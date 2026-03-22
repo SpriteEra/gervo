@@ -4,7 +4,7 @@ import prize from '../../public/Images/prize.png';
 
 const About = () => {
     return (
-        <div className="w-full mt-3 flex justify-start  py-12 overflow-x-hidden p-0">
+        <div className="w-full mt-3 flex justify-start pt-6 mb-0 overflow-x-hidden p-0">
             <div className="w-full max-w-7xl grid md:grid-cols-2 gap-8 items-start">
                 {/* LEFT SIDE */}
                 <div
@@ -74,7 +74,6 @@ const About = () => {
 
                 {/* RIGHT SIDE CONTENT */}
                 <div className="w-fullflex flex-col px-4 order-1 md:order-2 text-left md:text-left">
-
                     <div className="flex items-center gap-2 mb-2">
                         <div className="w-[56px] border-t-[3px] border-[#FFCC00]"></div>
                         <p className="text-xs sm:text-sm font-medium text-gray-500">
@@ -88,7 +87,6 @@ const About = () => {
                             Made for India
                         </span>
                     </h1>
-
                     <p className="text-gray-600 mt-3 sm:mt-4 text-xs sm:text-sm md:text-base leading-relaxed">
                         Grevo Global Pvt. Ltd. engineers high-performance industrial waste
                         management systems, advanced shredding technology, biomass processing
@@ -102,14 +100,14 @@ const About = () => {
 
                     <button
                         className="
-            mt-4 sm:mt-5
-            text-xs sm:text-sm
-            border border-red-500 text-red-500
-            px-3 py-1.5 sm:px-4 sm:py-2
-            rounded-full
-            hover:bg-red-500 hover:text-white
-            transition
-          "
+                                mt-4 sm:mt-5
+                                text-xs sm:text-sm
+                                border border-red-500 text-red-500
+                                px-3 py-1.5 sm:px-4 sm:py-2
+                                rounded-full
+                                hover:bg-red-500 hover:text-white
+                                transition
+                            "
                     >
                         Learn More →
                     </button>
