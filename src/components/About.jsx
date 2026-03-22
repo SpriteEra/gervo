@@ -4,14 +4,14 @@ import prize from '../../public/Images/prize.png';
 
 const About = () => {
     return (
-        <div className="w-full flex justify-center py-12 overflow-x-hidden">
-            <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+        <div className="w-full mt-3 flex justify-start  py-12 overflow-x-hidden p-0">
+            <div className="w-full max-w-7xl grid md:grid-cols-2 gap-8 items-start">
                 {/* LEFT SIDE */}
                 <div
                     className="
                         relative 
                         flex gap-4 
-                        justify-center md:justify-start
+                        justify-center md:justify-end ms:justify-center
                         scale-[0.7] sm:scale-[0.85] md:scale-100
                         origin-top
                         order-2 md:order-1
@@ -47,38 +47,43 @@ const About = () => {
                         <div className="w-[200px] h-[240px] rounded-xl overflow-hidden">
                             <img src={img2} className="w-full h-full object-cover" />
                         </div>
+                        <div
+                            className="
+                                relative
+                                bottom-14
+                                w-fit
+                                left-[90px]
+                                py-5
+
+                                scale-[0.8] sm:scale-90 md:scale-100
+                                origin-left
+                                bg-white shadow-md rounded-xl px-4 flex items-center gap-3
+                            "
+                        >
+                            <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                                <img src={prize} className="w-4 h-4" />
+                            </div>
+                            <div>
+                                <p className="text-sm font-semibold">German</p>
+                                <p className="text-xs">Engineering</p>
+                            </div>
+                        </div>
                     </div>
 
-                    {/* FLOATING CARD */}
-                    <div
-                        className="
-                            absolute 
-                            bottom-6 
-                            left-[310px]
-                            scale-[0.8] sm:scale-90 md:scale-100
-                            origin-left
-                            bg-white shadow-md rounded-xl px-4 py-2 flex items-center gap-3
-                        "
-                    >
-                        <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-                            <img src={prize} className="w-4 h-4" />
-                        </div>
-                        <div>
-                            <p className="text-sm font-semibold">German</p>
-                            <p className="text-xs">Engineering</p>
-                        </div>
-                    </div>
                 </div>
 
                 {/* RIGHT SIDE CONTENT */}
-                <div className="w-full max-w-xl px-4 order-1 md:order-2 text-left md:text-left">
+                <div className="w-fullflex flex-col px-4 order-1 md:order-2 text-left md:text-left">
 
-                    <p className="text-xs sm:text-sm font-medium text-gray-500 mb-2">
-                        About Grevo Global
-                    </p>
-
-                    <h1 className="font-bold leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                    <div className="flex items-center gap-2 mb-2">
+                        <div className="w-[56px] border-t-[3px] border-[#FFCC00]"></div>
+                        <p className="text-xs sm:text-sm font-medium text-gray-500">
+                            About Grevo Global
+                        </p>
+                    </div>
+                    <h1 className="font-bold  text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                         German Technology{" "}
+                        <br />
                         <span className="text-green-600 block sm:inline">
                             Made for India
                         </span>
