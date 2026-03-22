@@ -5,6 +5,7 @@ import About from './components/About';
 import StatsSection from './common/StatsSection';
 import OurProduct from './components/OurProduct';
 import OurServices from './components/OurServices';
+import ChooseUs from './components/ChooseUs';
 const App = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const App = () => {
       <StatsSection/>
       <OurProduct/>
       <OurServices/>
+      <ChooseUs/>
     </>
   );
 }
