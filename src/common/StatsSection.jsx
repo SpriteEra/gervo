@@ -9,7 +9,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="relative w-full min-h-[267px] flex items-center justify-center overflow-hidden font-poppins bg-[#0A121A]">
+    <section className="relative w-full min-h-[267px] mt-0 flex items-center justify-center overflow-hidden font-poppins bg-[#0A121A]">
       {/* Background Gradient Layer */}
       <div 
         className="absolute inset-0 w-full h-full"

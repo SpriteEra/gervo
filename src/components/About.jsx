@@ -4,8 +4,9 @@ import prize from '../../public/Images/prize.png';
 
 const About = () => {
     return (
-        <div className="w-full mt-3 flex justify-start pt-6 mb-0 overflow-x-hidden p-0">
+        <div className="w-full mt-3 flex justify-start pt-8 mb-0 overflow-x-hidden p-0">
             <div className="w-full max-w-7xl grid md:grid-cols-2 gap-8 items-start">
+                
                 {/* LEFT SIDE */}
                 <div
                     className="
@@ -71,7 +72,6 @@ const About = () => {
                     </div>
 
                 </div>
-
                 {/* RIGHT SIDE CONTENT */}
                 <div className="w-fullflex flex-col px-4 order-1 md:order-2 text-left md:text-left">
                     <div className="flex items-center gap-2 mb-2">
