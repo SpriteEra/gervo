@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import img3 from "../../public/Images/img3.png";
 import img4 from "../../public/Images/img4.png";
-const Product = () => {
+const OurProduct = () => {
 
     const products = [
         { id: 1, title: "HM-Series Hammer Mill", img: img3 },
@@ -178,4 +178,4 @@ const Product = () => {
     );
 };
 
-export default Product;
+export default OurProduct;
