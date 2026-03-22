@@ -6,6 +6,7 @@ import StatsSection from './common/StatsSection';
 import OurProduct from './components/OurProduct';
 import OurServices from './components/OurServices';
 import ChooseUs from './components/ChooseUs';
+import OurClients from './components/OurClients';
 const App = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const App = () => {
       <OurProduct/>
       <OurServices/>
       <ChooseUs/>
+      <OurClients/>
     </>
   );
 }
