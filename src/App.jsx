@@ -1,10 +1,14 @@
 import React from 'react';
-
+import Navbar from './common/Nav';
+import Hero from './components/Hero';
+import About from './components/About';
 const App = () => {
   return (
-    <div className='bg-blue-300 min-h-screen text-white '>
-      Hii
-    </div>
+    <>
+      <Navbar/>
+      <Hero/>
+      <About/>
+    </>
   );
 }
 
