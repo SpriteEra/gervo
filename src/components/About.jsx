@@ -6,22 +6,22 @@ const About = () => {
     return (
         <div className="w-full mt-3 flex justify-start pt-8 mb-0 overflow-x-hidden p-0">
             <div className="w-full max-w-7xl grid md:grid-cols-2 gap-8 items-start">
-                
+
                 {/* LEFT SIDE */}
                 <div
                     className="
                         relative 
                         flex gap-4 
                         justify-center md:justify-end ms:justify-center
-                        scale-[0.7] sm:scale-[0.85] md:scale-100
+                        scale-[0.9] sm:scale-[0.95] md:scale-100
                         origin-top
                         order-2 md:order-1
                         "
                 >
                     {/* LEFT COLUMN */}
-                    <div className="flex flex-col gap-4 mt-10">
+                    <div className="flex flex-col gap-4  mt-10">
 
-                        <div className="relative w-[200px] h-[240px] rounded-xl overflow-hidden">
+                        <div className="relative w-[150px] sm:w-[180px] md:w-[200px] aspect-[5/6] rounded-xl overflow-hidden">
                             <img src={img1} className="w-full h-full object-cover" />
                             <div className="absolute 
                                 w-[80px] h-[80px] 
@@ -31,7 +31,7 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="relative w-[200px] bg-red-100 rounded-xl overflow-hidden p-4">
+                        <div className="relative w-[150px] sm:w-[180px] md:w-[200px] bg-red-100 rounded-xl overflow-hidden p-4">
                             <h1 className="text-xl font-bold text-red-600">14+</h1>
                             <p className="text-sm">Year of Excellence</p>
                             <div className="absolute  mt-[-7px] mr-[-7px] top-0 right-0 w-8 h-8 bg-red-500 rounded-full"></div>
@@ -40,21 +40,23 @@ const About = () => {
 
                     {/* RIGHT COLUMN */}
                     <div className="flex flex-col gap-4">
-                        <div className="relative w-[200px] bg-green-100 rounded-xl overflow-hidden p-4">
+                        <div className="relative w-[150px] sm:w-[180px] md:w-[200px] bg-green-100 rounded-xl overflow-hidden p-4">
                             <h1 className="text-xl font-bold text-green-600">50+</h1>
                             <p className="text-sm">Product Variant</p>
                             <div className="absolute  mt-[-7px] mr-[-7px] top-0 right-0 w-8 h-8 bg-green-500 rounded-full"></div>
                         </div>
-                        <div className="w-[200px] h-[240px] rounded-xl overflow-hidden">
+                        <div className="w-[150px] sm:w-[180px] md:w-[200px] aspect-[5/6] rounded-xl overflow-hidden">
                             <img src={img2} className="w-full h-full object-cover" />
                         </div>
                         <div
                             className="
                                 relative
-                                bottom-14
+                              
                                 w-fit
-                                left-[90px]
+                             
                                 py-5
+                                left-18 md:left-[90px]
+                                bottom-12 md:bottom-14
 
                                 scale-[0.8] sm:scale-90 md:scale-100
                                 origin-left
