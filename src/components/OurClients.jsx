@@ -20,7 +20,6 @@ export default function OurClients() {
 
             scrollAmount += 0.5;
 
-            // infinite loop (since we duplicate items)
             if (scrollAmount >= container.scrollWidth / 2) {
                 scrollAmount = 0;
             }
@@ -37,21 +36,36 @@ export default function OurClients() {
 
             {/* Heading */}
             <div className="flex items-center justify-center gap-4">
-                <Star className="text-white w-6 h-6" />
-                <h2 className="text-white text-3xl md:text-4xl font-semibold text-center">
+                
+                {/* Left Stars */}
+                <div className="flex items-center gap-1">
+                    <Star className="text-white w-5 h-5 stroke-[1.5] fill-none" />
+                    <Star className="absolute ml-4 mb-7 text-white w-3 h-3 stroke-[1.5] fill-none" />
+                </div>
+
+                {/* Text */}
+                <h2 className="text-white text-3xl md:text-4xl font-semibold text-center whitespace-nowrap">
                     Our Clients
                 </h2>
-                <Star className="text-white w-6 h-6" />
+
+                {/* Right Stars */}
+                <div className="flex items-center gap-1">
+                    <Star className="text-white w-3 h-3 absolute mr-8 mb-7 stroke-[1.5] fill-none" />
+                    <Star className="text-white w-5 h-5 ml-1 stroke-[1.5] fill-none" />
+                </div>
+
             </div>
 
             {/* Desktop */}
             <div className="hidden md:flex justify-center mt-16 gap-20 items-center">
                 {logos.map((logo, i) => (
                     <img
+                        key={i}
                         src={logo}
                         alt="client"
-                        className={`h-16 object-contain ${i % 5 === 3 ? "rounded-xl" : "rounded-full"
-                            } ${i % 5 === 4 ? "invert rounded-none" : ""}`}
+                        className={`h-16 object-contain ${
+                            i % 5 === 3 ? "rounded-xl" : "rounded-full"
+                        } ${i % 5 === 4 ? "invert rounded-none" : ""}`}
                     />
                 ))}
             </div>
@@ -69,12 +83,14 @@ export default function OurClients() {
                         <img
                             src={logo}
                             alt="client"
-                            className={`h-16 object-contain ${i % 5 === 3 ? "rounded-xl" : "rounded-full"
-                                } ${i % 5 === 4 ? "invert rounded-none" : ""}`}
+                            className={`h-16 object-contain ${
+                                i % 5 === 3 ? "rounded-xl" : "rounded-full"
+                            } ${i % 5 === 4 ? "invert rounded-none" : ""}`}
                         />
                     </div>
                 ))}
             </div>
+
         </div>
     );
 }

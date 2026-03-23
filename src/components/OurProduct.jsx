@@ -13,18 +13,22 @@ const OurProduct = () => {
     ];
 
     const [index, setIndex] = useState(0);
-    const [isDesktop, setIsDesktop] = useState(false);
+    const [itemsPerView, setItemsPerView] = useState(1);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsDesktop(window.innerWidth >= 768);
+            if (window.innerWidth >= 768) {
+                setItemsPerView(2); // tablet + desktop
+            } else {
+                setItemsPerView(1); // mobile
+            }
         };
+
         handleResize();
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const itemsPerView = isDesktop ? 2 : 1;
     const maxIndex = products.length - itemsPerView;
 
     const next = () => {
@@ -37,6 +41,7 @@ const OurProduct = () => {
 
     return (
         <section className="w-full bg-[rgba(0,173,40,0.1)] flex flex-col relative px-4 sm:px-6 lg:px-8 py-8 overflow-hidden">
+
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <svg
                     viewBox="0 0 1440 200"
@@ -81,6 +86,7 @@ const OurProduct = () => {
             </div>
 
             <div className="w-full flex items-center justify-center relative mt-12">
+
                 <button
                     onClick={prev}
                     className="absolute left-2 sm:left-6 z-10 bg-white p-2 rounded-full shadow hover:scale-105 transition"
@@ -98,11 +104,14 @@ const OurProduct = () => {
                         {products.map((item) => (
                             <div
                                 key={item.id}
-                                className="min-w-full md:min-w-[50%] flex justify-center"
+                                className="flex justify-center px-2 sm:px-3"
+                                style={{
+                                    minWidth: `${100 / itemsPerView}%`,
+                                }}
                             >
                                 <div className="w-full max-w-[520px] bg-white rounded-[10px] shadow-[0px_0px_4px_rgba(0,0,0,0.25)] overflow-hidden flex flex-col items-center">
 
-                                    <div className="w-full h-[250px] sm:h-[320px] md:h-[400px] lg:h-[469px] overflow-hidden">
+                                    <div className="w-full h-[250px] sm:h-[320px] md:h-[360px] lg:h-[420px] overflow-hidden">
                                         <img
                                             src={item.img}
                                             alt={item.title}
